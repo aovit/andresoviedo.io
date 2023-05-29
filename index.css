@@ -130,7 +130,7 @@
   }
   
   
-  @media screen and (min-width:750px) {
+  @media screen and (min-width:1000px) {
     .button-menu{
       display: none;
     }
