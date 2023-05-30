@@ -55,7 +55,7 @@ function showSlides(n) {
 // full tienda
 
 function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
+  let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -69,6 +69,20 @@ function openPage(pageName,elmnt,color) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+//document.getElementById("defaultOpen").click();
 
 // fin full tienda
+
+// Dropdown
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+// fin del Dropdown
