@@ -67,7 +67,7 @@
     position: relative;
   }
   .link-item:hover {
-    text-decoration: none;
+    text-decoration: none; 
     color: black;
 }
 .link-item2:hover {
