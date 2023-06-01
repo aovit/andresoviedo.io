@@ -68,6 +68,13 @@ function openPage(pageName,elmnt,color) {
   elmnt.style.backgroundColor = color;
 }
 
+
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 // Get the element with id="defaultOpen" and click on it
 //document.getElementById("defaultOpen").click();
 
