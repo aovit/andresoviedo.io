@@ -52,7 +52,7 @@ browsers.forEach((el) => {
   $template.querySelector("img").setAttribute("src", el.imagen);
   $template.querySelector("img").setAttribute("alt", el.titulo);
   $template.querySelector(".titulo-producto").textContent = el.titulo;
-  $template.querySelector(".price").textContent = el.precio;
+  $template.querySelector(".price").textContent = "$" + el.precio;
   $template.querySelector(".descripcion-producto").textContent = el.descripcion;
 
   let $clone = document.importNode($template, true);

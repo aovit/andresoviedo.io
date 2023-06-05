@@ -3,8 +3,8 @@
 :root {
   --celular: 450px;
   --base: black;
-  --principal: rgb(243, 98, 188);
-  --color-link: rgb(243, 98, 188);
+  --principal: rgb(98, 125, 243);
+  --color-link: rgb(98, 125, 243);
   --color-link-hover: black;
   --background-principal: white;
   --letra-menu-desktop: 20px;
@@ -404,7 +404,7 @@ body, html {
   
   .dropdown-content a:hover {
     background-color: var(--background-principal);
-    color: var(--background-principal);
+    color: var(--color-link-hover);
   }
   
   .dropdown:hover .dropdown-content {
