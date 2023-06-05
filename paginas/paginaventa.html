@@ -65,12 +65,86 @@
           <span></span>
         </button>
       </header>
+
+            <!-- carrusel -->
+      
+      
+            <div class="container">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="../img/gato.jpg" style="width: 100%;">
+                  </div>
+                  
+                  <div class="mySlides">
+                      <div class="numbertext">2 / 6</div>
+                      <img src="../img/gato1.jpg" style="width:100%">
+                  </div>
+                  
+                  <div class="mySlides">
+                      <div class="numbertext">3 / 6</div>
+                      <img src="../img/gato2.jpg" style="width:100%">
+                  </div>
+                  <div class="mySlides">
+                      <div class="numbertext">1 / 6</div>
+              <img src="../img/gato.jpg" style="width: 100%;">
+          </div>
+          
+          <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+              <img src="../img/gato1.jpg" style="width:100%">
+          </div>
+          
+          <!-- <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+              <img src="./img/gato2.jpg" style="width:100%">
+          </div> -->
+          
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+          
+          <div class="caption-container">
+              <p id="caption"></p>
+          </div>
+          
+          <div class="row">
+              <div class="column">
+                  <img class="demo cursor" src="../img/gato.jpg" style="width:100%" onclick="currentSlide(1)" alt="Gato sentado">
+              </div>
+              <div class="column">
+                  <img class="demo cursor" src="../img/gato1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Gato contento">
+              </div>
+              <div class="column">
+                  <img class="demo cursor" src="../img/gato2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Gato dormilón">
+              </div>
+              <div class="column">
+                  <img class="demo cursor" src="../img/gato.jpg" style="width:100%" onclick="currentSlide(1)" alt="Gato peresozo">
+              </div>
+              <div class="column">
+                  <img class="demo cursor" src="../img/gato1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Gato esperando">
+              </div>
+              <!-- <div class="column">
+                  <img class="demo cursor" src="./img/gato2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Gato vestido">
+              </div> -->
+          </div>
+      </div>
+      
+      <h4 style="text-align:center">Para carrusel</h4>
+      <!-- termina carrusel -->
+
+      <!--  boton whatApp -->
       <a class="boton-wsp" href="https://wa.me/+573226164092" target="_blank">
         <img src="../logos/whatsapp.png" alt="logo instagram" margin="0" pading="0px">
     </a>
+
+    <!-- termina botón WHATSAPP -->
+
+    <!-- MENSAJE BIENVENIDA -->
       <div class="mensaje-bienvenida">
         <p><strong>Bienvenid@ a tu página favorita <img src="../logos/ojos-del-corazon.png" alt="carita ojos corazon" width="20px" height="20px"></strong></p>
       </div>
+      <!-- TERMINA MENSAJE BIENVENIDA -->
+    
+      <!-- CARDS DE PRODUCTOS -->
       <div class="cards">
         <template id="template-card">
             <div class="overflow-auto">
@@ -86,6 +160,8 @@
               </div>
         </template>
       </div>
+
+      <!-- TERMINA CARDS DE PRODUCTOS -->
       <script src="../index.js"></script>
       <script src="../productos.js"></script>
 </body>

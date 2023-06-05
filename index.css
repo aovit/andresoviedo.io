@@ -268,7 +268,7 @@
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0);
   }
   
   /* Number text (1/3 etc) */
@@ -283,7 +283,7 @@
   /* Container for image text */
   .caption-container {
     text-align: center;
-    background-color: #222;
+    background-color: var(--principal);
     padding: 2px 16px;
     color: var(--background-principal);
   }
@@ -436,6 +436,9 @@ body, html {
       width: 100%;
       text-align: left;
     }
+    .caption-container p {
+      font-size: 20px;
+    }
   }
   
 
@@ -447,7 +450,7 @@ body, html {
  /* ESTILO TARJETA DE PRODUCTO */
 
  .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 white;
   width: 98%;
   margin: auto;
   text-align: center;
@@ -464,7 +467,7 @@ body, html {
   outline: 0;
   padding: 12px;
   color: var(--background-principal);
-  background-color: var(--base);
+  background-color: var(--principal);
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -478,7 +481,7 @@ body, html {
 .overflow-auto {
   max-width: 50%;
   float: left;
-  background-color: var(--base);
+  background-color: var(--principal);
   border: 10px;
 }
 
