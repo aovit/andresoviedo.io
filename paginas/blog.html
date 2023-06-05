@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <nav id="main-nav" class="sidebar">
+            <a href="../index.html" onclick="route()">Home</a>
+            <a href="../abuot.html" onclick="route()">About</a>
+            <a href="../tienda.html" onclick="route()">Tienda</a>
+        </nav>
+        <div id="main-page">
+
+        </div>
+    </div>
+    <script src="../index.js"></script>
+    <script>
+        const route = (event) => {
+            event = event || window.event;
+            event.preventDefult();
+            window.history.pushState({}, event.target.href);
+            //handlelocation()
+        }
+
+        /* const routes = {
+            404 : "/paginas/404.html",
+            "/" : "/paginas/index.html",
+            "/about" : "/paginas/about.html",
+            "/tienda" : "/paginas/tienda.html",
+        } */
+
+        //const handlelocation = async () => {
+            //const path = window.location.pathname;
+            //const rout = routes[path] || route[404];
+            //const html = await fetch(rout).then((data) => data.text());
+            //document.getElementById("main-page").innerHTML = html;
+        //}
+
+        //window.onpopstate = handlelocation;
+        window.route = route;
+
+        //handlelocation();
+    </script>
+</body>
+</html>
