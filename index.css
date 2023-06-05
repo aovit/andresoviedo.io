@@ -176,7 +176,7 @@
         color: var(--color-link);
         text-decoration: none;
         font-size: var(--letra-menu-desktop);
-      }
+      } 
       .link-item2{
           display: none;
         }
