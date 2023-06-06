@@ -4,44 +4,19 @@ const $fragment = document.createDocumentFragment();
 const browsers = [
     {
         titulo: "perro riendo",
-        imagen: "../img/perro1.jpg",
+        imagen: "../img/perro3.jpg",
         descripcion: "este es el perro 0",
-        precio: "$" + 20000,
+        precio: 20000,
     },
     {
-        titulo: "gato durmiendo",
-        imagen: "../img/gato1.jpg",
+        titulo: "perro ojón",
+        imagen: "../img/perro2.jpg",
         descripcion: "este es el gato 1",
         precio: 2000,
     },
     {
-        titulo: "gato rascando",
-        imagen: "../img/gato2.jpg",
-        descripcion: "este es el gato 2",
-        precio: 5000,
-    },{
-        titulo: "gato durmiendo",
-        imagen: "../img/gato1.jpg",
-        descripcion: "este es el gato 1",
-        precio: 2000,
-    },{
-        titulo: "gato durmiendo",
-        imagen: "../img/gato1.jpg",
-        descripcion: "este es el gato 1",
-        precio: 2000,
-    },{
-        titulo: "gato durmiendo",
-        imagen: "../img/gato1.jpg",
-        descripcion: "este es el gato 1",
-        precio: 2000,
-    },{
-        titulo: "gato durmiendo",
-        imagen: "../img/gato1.jpg",
-        descripcion: "este es el gato 1",
-        precio: 2000,
-    },{
-        titulo: "gato durmiendo",
-        imagen: "../img/gato1.jpg",
+        titulo: "perro tierno",
+        imagen: "../img/perro3.jpg",
         descripcion: "este es el gato 1",
         precio: 2000,
     },

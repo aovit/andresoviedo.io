@@ -230,6 +230,8 @@
   /* Position the image container (needed to position the left and right arrows) */
   .container {
     position: relative;
+    padding: 3px;
+    margin: auto;
   }
   
   /* Hide the images by default */
@@ -284,7 +286,6 @@
   .caption-container {
     text-align: center;
     background-color: var(--principal);
-    padding: 2px 16px;
     color: var(--background-principal);
   }
   
@@ -449,9 +450,13 @@ body, html {
 
  /* ESTILO TARJETA DE PRODUCTO */
 
+ .cards {
+  margin: 2%;
+ }
+
  .card {
   box-shadow: 0 4px 8px 0 white;
-  width: 98%;
+  width: 90%;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -481,7 +486,7 @@ body, html {
 .overflow-auto {
   max-width: 50%;
   float: left;
-  background-color: var(--principal);
+  background-color: var(--background-principal);
   border: 10px;
 }
 
