@@ -1,0 +1,43 @@
+[
+    {
+        "tipo": "sudaderas",
+        "titulo": "sudadera",
+        "imagen": "../img/perro2.jpg",
+        "descripcion": "este es el perro 0",
+        "precio": 20000,
+        "supagina": "../abuotcopy2.html"
+    },
+    {
+        "tipo": "camisetas",
+        "titulo": "camiseta",
+        "imagen": "../img/perro3.jpg",
+        "descripcion": "este es el perro 0",
+        "precio": 20000,
+        "supagina": "../abuotcopy2.html"
+    },
+    {
+        "tipo": "busos",
+        "titulo": "buso",
+        "imagen": "../img/perro2.jpg",
+        "descripcion": "este es el perro 0",
+        "precio": 20000,
+        "supagina": "../abuotcopy2.html"
+    },
+    {
+        "tipo": "pantalones",
+        "titulo": "pantalón",
+        "imagen": "../img/perro3.jpg",
+        "descripcion": "este es el perro 0",
+        "precio": 20000,
+        "supagina": "../abuotcopy2.html"
+    },
+    {
+        "tipo": "sudaderas",
+        "titulo": "sudadera2",
+        "imagen": "../img/perro2.jpg",
+        "descripcion": "este es el perro 4",
+        "precio": 20000,
+        "supagina": "../abuotcopy2.html"
+    }
+
+]

@@ -19,7 +19,7 @@ navWrapper.addEventListener('click',e => {
 
 
 // carrusel
-
+/* 
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -48,7 +48,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
-
+ */
 
 // termina carrusel
 

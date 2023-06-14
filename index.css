@@ -3,8 +3,8 @@
 :root {
   --celular: 450px;
   --base: black;
-  --principal: rgb(98, 125, 243);
-  --color-link: rgb(98, 125, 243);
+  --principal: rgb(48, 131, 255);
+  --color-link: rgb(48, 131, 255);
   --color-link-hover: black;
   --background-principal: white;
   --letra-menu-desktop: 20px;
@@ -47,7 +47,7 @@
       transition: all .2s linear;
       background-color: rgba(0,0,0,.5);
       
-      z-index: 100;
+      z-index: 200;
     }
     
     .main-nav.show{
@@ -236,7 +236,7 @@
   
   /* Hide the images by default */
   .mySlides {
-    display: none;
+    display: block;
   }
   
   /* Add a pointer when hovering over the thumbnail images */
@@ -452,6 +452,8 @@ body, html {
 
  .cards {
   margin: 2%;
+  padding: 1px;
+  margin: 1px;
  }
 
  .card {
@@ -460,6 +462,7 @@ body, html {
   margin: auto;
   text-align: center;
   font-family: arial;
+  padding: 2px;
 }
 
 .price {
@@ -484,7 +487,7 @@ body, html {
 }
 
 .overflow-auto {
-  max-width: 50%;
+  max-width: 48%;
   float: left;
   background-color: var(--background-principal);
   border: 10px;
@@ -492,7 +495,7 @@ body, html {
 
 @media screen and (max-width: 450px) {
   .overflow-auto {
-    max-width: 100%;
+    max-width: 96%;
   }
 }
 
@@ -541,7 +544,7 @@ body, html {
   -o-transition: opacity 1s;
   transition: opacity 1s;
   z-index: -1;
-  opacity: 0;
+  /* opacity: 0; */
 }
 #container-slider .arrowPrev, #container-slider .arrowNext{
   font-size: 30pt;

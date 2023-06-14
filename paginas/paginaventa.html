@@ -12,6 +12,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+    <style>
+      /* .sudaderas {
+        display: none;
+      } */
+      /* .camisetas, .sudaderas {
+        display: none;
+      } */
+      /* .busos {
+        display: none;
+      } */
+      /* .pantalones {
+        display: none;
+      }  */
+    </style>
+
 
 </head>
 <body>
@@ -132,16 +147,35 @@
 
     <!-- termina botón WHATSAPP -->
 
-    
-    
+    <!-- TARJETAS DE CATEGORIA -->
+    <div class="cards">
+      <template id="template-categorias">
+        <div class="overflow-auto">
+          <div class="card">
+            <a>
+              <img width="100%">
+            </a>
+            <h2 class="titulo-producto"></h2>
+            <a id="seleccionar">
+              <p class="p-button"><button class="button">Sellecionar</button></p>
+            </a>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <!-- FIN TARJETAS DE CATEGORIA --> 
+
       <!-- CARDS DE PRODUCTOS -->
       <div class="cards">
         <template id="template-card">
-            <div class="overflow-auto">
+            <div class="overflow-auto" id="overflow-auto">
                 <h3 style="text-align:center"></h3>
               
                 <div class="card">
-                  <img width="100%">
+                  <a class="asupagina">
+                    <img width="100%">
+                  </a>
                   <h2 class="titulo-producto"></h2>
                   <p class="price"></p>
                   <p class="descripcion-producto"></p>
@@ -152,8 +186,10 @@
       </div>
 
       <!-- TERMINA CARDS DE PRODUCTOS -->
+      
       <script src="../index.js"></script>
       <script src="../productos.js"></script>
+      <script src="../categorias.js"></script>
       <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 </body>

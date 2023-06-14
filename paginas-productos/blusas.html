@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paginaventa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link src="https://fonts.googleapis.com/css?family=Architects+Daughter">
+
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+          }
+          body {
+            font-family: 'Raleway', sans-serif;
+            position: relative;
+          }
+          .img-container img {
+            width: 100%;
+            display: block;
+          }
+          .img-container {
+            background-color: red;
+            position: relative;
+          }
+
+          .content {
+            background: transparent;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s ease;
+            color: #fff;
+            opacity: 0;
+          }
+
+          .img-container:hover .content {
+            opacity: 1;
+            background: tomato;
+          }
+
+          .zoom-text {
+            width: 80px;
+            height: 80px;
+            background: burlywood;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: transform 0.2s linear;
+          }
+
+          .content h2 {
+            padding: 15px 0;
+          }
+
+          .zoom-text:hover {
+            cursor: zoom-in;
+            transform: scale(1.1);
+          }
+
+          .image-view {
+            position: fixed;
+            top: 0;
+            height: 300vw;
+            background: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            display: none;
+          }
+
+          .image-box {
+            width: 80vw;
+            height: 80vw;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* background: tomato; */
+            display: none;
+          }
+
+          #prev-btn, #next-btn {
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.5s ease;
+            cursor: pointer;
+          }
+
+          #prev-btn {
+            border-right: 40px solid grey;
+            left: 5px;
+          }
+
+          #next-btn {
+            border-left: 40px solid grey;
+            right: 5px;
+          }
+
+          #next-btn:hover, #prev-btn:hover {
+            opacity: 0.6;
+          }
+
+          /* *************** media queries************* */
+
+          @media (max-width: 992px) {
+            .container{
+              grid-template-columns: 1fr;
+            }
+            .image-box{
+              height: 85vh;
+            }
+          }
+
+          @media(max-width: 678px) {
+            .image-box{
+              height: 75vh;
+            }
+          }
+
+          @media(max-width: 343px) {
+            .image-box{
+              height: 65vh;
+            }
+          }
+
+      
+
+    </style>
+
+
+</head>
+<body>
+
+    <header class="main-header" >
+        <a class="main-logo" href="/aovit.github.io/index.html" >
+          <strong>LOGO</strong>
+        </a>
+        <nav id="nav" class="main-nav topnav" >
+          <div class="nav-links" >
+            <a class="link-item" href="./abuot.html" >Acerca de Nosotros</a>
+            <hr>
+            <a class="link-item" href="./contacts.html" >Contactos</a>
+            <hr>
+            <a class="link-item" href="./tienda.html" >Tienda</a>
+            <hr>
+            <!-- Dropdown -->
+            
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a class="link-item" href="./paginas/blog.html">BLOG</a>
+                  <hr>
+                  <a class="link-item" href="./paginas/paginaventa.html">Página de ventas</a>
+                  <hr>
+                  <a class="link-item" href="./contacts.html">Link 3</a>
+                </div>
+              </div>
+    
+    
+            <!-- fin Dropdown-->
+    
+    
+            
+            <a class="link-item2" href="https://instagram.com/eaoviedot?igshid=NGExMmI2YTkyZg==" target="_blank">
+                <img src="./logos/instagram.png" alt="logo instagram" width="30px" height="30px" margin="0" pading="0px">
+            </a>
+            <a class="link-item2" href="#">
+                <img src="./logos/facebook.png" alt="logo instagram" width="30px" height="30px" margin="0" pading="0px">
+            </a>
+            <a class="link-item2" href="https://wa.me/+573226164092" target="_blank">
+                <img src="./logos/whatsapp.png" alt="logo instagram" width="30px" height="30px" margin="0" pading="0px">
+            </a>
+            
+          </div>
+        </nav>
+        <button id="button-menu" class="button-menu" >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+
+
+
+      <!-- MENSAJE BIENVENIDA -->
+      <div class="mensaje-bienvenida">
+        <p><strong>Bienvenid@ a tu página favorita <img src="../logos/ojos-del-corazon.png" alt="carita ojos corazon" width="20px" height="20px"></strong></p>
+      </div>
+      <!-- TERMINA MENSAJE BIENVENIDA -->
+
+
+      <!--  boton whatApp -->
+      <a class="boton-wsp" href="https://wa.me/+573226164092" target="_blank">
+        <img src="../logos/whatsapp.png" alt="logo instagram" margin="0" pading="0px">
+    </a>
+
+    <!-- termina botón WHATSAPP -->
+
+
+
+      <!-- CARDS DE PRODUCTOS -->
+<div class="cards">
+        <template id="template-card">
+            <div id="overflow-auto">
+                <div class="card">
+                    <!-- <img id="bg1" style="width:100%">
+                        <p><button>Ver más detalles</button></p>
+                        <div id="myModal" class="modal"> -->
+                            <div class="img-container">
+                                <img class="imagen-principal">
+                                <div class="content">
+                                    <div class="zoom-text">Click</div>
+                                    <h2>Landscape One</h2>
+                                </div>
+                            </div>
+                            <H3 class="titulo-producto"></H3>
+                            <p class="price"></p>
+                            <p class="descripcion-producto"></p>
+                        
+                    
+                    </div>
+                </div>
+            </div>
+            <!-- MODAL -->
+      
+
+      <!-- FIN MODAL -->
+        </template>
+      </div>
+      <div class="image-view"></div>
+
+      <div class="image-box">
+        <div id="prev-btn"></div>
+        <div id="next-btn"></div>
+      </div>
+
+      
+
+      <!-- FIN CARDS DE PRODUCTOS -->
+      
+      <script src="../index.js"></script>
+      <script src="../productos.js"></script>
+      <!-- <script src="../categorias.js"></script> -->
+      <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+      <script>
+        const imageView = document.querySelector(".image-view")
+        const imageBox = document.querySelector(".image-box")
+        const nextBtn = document.getElementById("next-btn")
+        const prevBtn = document.getElementById("prev-btn")
+        
+
+
+        document.addEventListener("click", e => {
+            e.stopImmediatePropagation()
+
+            let numImage = 1;
+            let id = e.target.parentElement.children[0].dataset.id;
+            
+            
+            if(e.target.matches(".zoom-text")) {
+                e.stopImmediatePropagation()
+                //let numImage = 1;
+                //console.log(id)
+                imageView.style.display = "block";
+                imageBox.style.display = "block";
+                
+                currentImagedisplay(id, numImage)
+            }
+            function currentImagedisplay(id, numImage) {
+                
+                imageBox.style.background = `url("/aovit.github.io/img/perro${id}${numImage}.jpg")
+                center/cover no-repeat`;
+                //console.log(id, numImage)
+            }
+            
+            prevBtn.addEventListener("click", function(e) {
+                e.stopImmediatePropagation()
+                id = id;
+                numImage--;
+                if(numImage < 1) {
+                    numImage = 3;
+                }
+                currentImagedisplay(id, numImage)
+                console.log(id, numImage)
+            })
+            
+            nextBtn.addEventListener("click", function(e) {
+                e.stopImmediatePropagation()
+                numImage++;
+                if(numImage > 3) {
+                    numImage = 1;
+                }
+                currentImagedisplay(id, numImage)
+                console.log(id, numImage)
+            })
+            if(e.target.matches(".image-view")) {
+                e.stopImmediatePropagation()
+                imageView.style.display = "none";
+                imageBox.style.display = "none";
+                document.location.reload()
+            }
+        })
+
+        
+        
+
+        /* document.addEventListener("click", e=> {
+            e.preventDefault();
+            let parent = e.target.parentElement.children[5];
+            if(e.target.matches(".card img")) {
+                let parent0 = parent.children[0].children[0].children[0];
+                let parent1 = parent.children[0].children[0].children[1];
+                let parent2 = parent.children[0].children[0].children[2];
+                parent.style.display = "block";
+                parent1.style.display = "none";
+                parent2.style.display = "none";
+                console.log(parent1)
+                document.addEventListener("click", e=> {
+                    if(e.target.matches(".card .close")) {
+                        parent.style.display = "none"
+                    }
+                    if(e.target.matches(".card #imagen1, #imagen2, #imagen3")) {
+                        parent.style.display = "block"
+                    } */
+                    /* e.preventDefault();
+                    if(e.target.matches(".card .close")) {
+                        parent.style.display = "none"
+                    }
+                    if(e.target.matches(".card img")) {
+                        parent.style.display = "block"
+                    }
+                    let slideIndex = 1;
+                    let slides = e.target.parentElement.children[0].children;
+                    slides[0].style.display = "none";  
+                    slides[1].style.display = "none";  
+                    slides[2].style.display = "block"; 
+                    if(e.target.matches(".card .prev")) {
+                        //plusSlides(-1)
+                        slides[0].style.display = "none";  
+                        slides[1].style.display = "none";  
+                        slides[2].style.display = "block";  
+                    } */
+                    /* if(e.target.matches(".card .next")) {
+                        plusSlides(1)
+                    }
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+                    showSlides(slideIndex);
+                    function showSlides(n) {
+                        let i;
+                        let slides = e.target.parentElement.children[0].children;
+                        console.log(slides.length)
+                        if (n > slides.length) {slideIndex = 1}    
+                        if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                        }
+                        slides[slideIndex-1].style.display = "block";
+                    } */
+                /* })
+            }
+            
+        }) */
+
+      </script>
+</body>
+</html>
+

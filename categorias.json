@@ -1,0 +1,22 @@
+[
+    {
+        "titulo": "BLUSAS",
+        "imagen": "./img/perro11.jpg",
+        "supagina": "./paginas-productos/blusas.html"
+    },
+    {
+        "titulo": "VESTIDOS",
+        "imagen": "./img/perro21.jpg",
+        "supagina": "./abuotcopy2.html"
+    },
+    {
+        "titulo": "PANTALONES",
+        "imagen": "./img/perro31.jpg",
+        "supagina": "./abuotcopy2.html"
+    },
+    {
+        "titulo": "FALDAS",
+        "imagen": "./img/perro41.jpg",
+        "supagina": "./abuotcopy2.html"
+    }
+]

@@ -13,279 +13,166 @@
         
     </head>
 <body>
-
-    <header class="main-header" >
-        <a class="main-logo" href="./index.html" >
-          <strong>LOGO</strong>
-        </a>
-        <nav id="nav" class="main-nav topnav" >
-          <div class="nav-links" >
-            <a class="link-item" href="./abuot.html" >Acerca de Nosotros</a>
-            <hr>
-            <a class="link-item" href="./contacts.html" >Contactos</a>
-            <hr>
-            <a class="link-item" href="./tienda.html" >Tienda</a>
-            <hr>
-            <!-- Dropdown -->
-            
-            <div class="dropdown">
-                <button class="dropbtn">Dropdown 
-                  <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                  <a class="link-item" href="./paginas/blog.html">BLOG</a>
-                  <a class="link-item" href="./paginas/paginaventa.html">Página de ventas</a>
-                  <a class="link-item" href="#">Link 3</a>
-                </div>
-              </div>
-
-
-            <!-- fin Dropdown-->
-
-
-            
-            <a class="link-item2" href="https://instagram.com/eaoviedot?igshid=NGExMmI2YTkyZg==" target="_blank">
-                <img src="./logos/instagram.png" alt="logo instagram" width="30px" height="30px" margin="0" pading="0px">
-            </a>
-            <a class="link-item2" href="#">
-                <img src="./logos/facebook.png" alt="logo instagram" width="30px" height="30px" margin="0" pading="0px">
-            </a>
-            <a class="link-item2" href="https://wa.me/+573226164092" target="_blank">
-                <img src="./logos/whatsapp.png" alt="logo instagram" width="30px" height="30px" margin="0" pading="0px">
-            </a>
-            
+  <header class="main-header" >
+    <a class="main-logo" href="./index.html" >
+      <strong>LOGO</strong>
+    </a>
+    <nav id="nav" class="main-nav topnav" >
+      <div class="nav-links" >
+        <a class="link-item" href="./abuot.html" >Acerca de Nosotros</a>
+        <hr>
+        <a class="link-item" href="./contacts.html" >Contactos</a>
+        <hr>
+        <a class="link-item" href="./tienda.html" >Tienda</a>
+        <hr>
+        <!-- Dropdown -->
+        
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a class="link-item" href="./paginas/blog.html">BLOG</a>
+              <hr>
+              <a class="link-item" href="./paginas/paginaventa.html">Página de ventas</a>
+              <hr>
+              <a class="link-item" href="./contacts.html">Link 3</a>
+            </div>
           </div>
-        </nav>
-        <button id="button-menu" class="button-menu" >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </header>
-      
-      <!-- carrusel -->
-      
-      
-      <div class="container">
-          <div class="mySlides">
-              <div class="numbertext">1 / 6</div>
-              <img src="./img/gato.jpg" style="width: 100%;">
+
+
+        <!-- fin Dropdown-->
+
+
+        
+        <a class="link-item2" href="https://instagram.com/eaoviedot?igshid=NGExMmI2YTkyZg==" target="_blank">
+            <img src="./logos/instagram.png" alt="logo instagram" width="30px" height="30px" margin="0" pading="0px">
+        </a>
+        <a class="link-item2" href="#">
+            <img src="./logos/facebook.png" alt="logo instagram" width="30px" height="30px" margin="0" pading="0px">
+        </a>
+        <a class="link-item2" href="https://wa.me/+573226164092" target="_blank">
+            <img src="./logos/whatsapp.png" alt="logo instagram" width="30px" height="30px" margin="0" pading="0px">
+        </a>
+        
+      </div>
+    </nav>
+    <button id="button-menu" class="button-menu" >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- MENSAJE BIENVENIDA -->
+  <div class="mensaje-bienvenida">
+    <p><strong>Bienvenid@ a tu página favorita <img src="./logos/ojos-del-corazon.png" alt="carita ojos corazon" width="20px" height="20px"></strong></p>
+  </div>
+  <!-- TERMINA MENSAJE BIENVENIDA -->
+
+  <!-- SLIDER -->
+
+  <section id="container-slider">	
+    <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+    <a href="javascript: fntExecuteSlide('next');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+    <ul class="listslider">
+      <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+      <li><a itlist="itList_1" href="#"></a></li>
+      <li><a itlist="itList_2" href="#"></a></li>
+      <li><a itlist="itList_3" href="#"></a></li>
+    </ul>
+    <ul id="slider">
+        <li style="background-image: url('./img/gato.jpg'); z-index:0; opacity: 1;">
+          <div class="content_slider" >
+            <div>
+              <h2>primer título h2 para esta imagen</h2>
+              <p>Un resumen muy concreto</p>
+              <a href="#" class="btnSlider">Ver más</a>
             </div>
-            
-            <div class="mySlides">
-                <div class="numbertext">2 / 6</div>
-                <img src="./img/gato1.jpg" style="width:100%">
+          </div>
+        </li>
+        <li style="background-image: url('./img/gato1.jpg'); ">
+          <div class="content_slider" >
+            <div>
+              <h2>Negocios</h2>
+              <p>Recursos, guías, herramientas y consejos para emprender, crear tu empresa o iniciar un negocio exitoso</p>
+              <a href="#" class="btnSlider">Ver más</a>
             </div>
-            
-            <div class="mySlides">
-                <div class="numbertext">3 / 6</div>
-                <img src="./img/gato2.jpg" style="width:100%">
+          </div>
+        </li>
+        <li style="background-image: url('./img/gato3.jpg'); ">
+          <div class="content_slider" >
+            <div>
+              <h2>Estrategias de negocio</h2>
+              <p>Las estrategias de negocio representan planes o métodos...</p>
+              <a href="#" class="btnSlider">Ver más</a>
             </div>
-            <div class="mySlides">
-                <div class="numbertext">1 / 6</div>
-        <img src="./img/gato.jpg" style="width: 100%;">
+          </div>
+        </li>
+        <li style="background-image: url('./img/gato4.jpg'); ">
+          <div class="content_slider" >
+            <div>
+              <h2>Negocios</h2>
+              <p>Recursos, guías, herramientas y consejos para emprender, crear tu empresa o iniciar un negocio exitoso</p>
+              <a href="#" class="btnSlider">Ver más</a>
+            </div>
+          </div>
+        </li>
+   </ul>
+ </section>
+
+  <!-- FIN SLIDER -->
+
+  <!--  boton whatApp -->
+  <a class="boton-wsp" href="https://wa.me/+573226164092" target="_blank">
+    <img src="./logos/whatsapp.png" alt="logo instagram" margin="0" pading="0px">
+</a>
+
+<!-- termina botón WHATSAPP -->
+
+<!-- TARJETAS DE CATEGORIA -->
+<div class="cards">
+  <template id="template-categorias">
+    <div class="overflow-auto">
+      <div class="card">
+        <a>
+          <img width="100%">
+        </a>
+        <h2 class="titulo-producto"></h2>
+        <a id="seleccionar">
+          <p class="p-button"><button class="button">Sellecionar</button></p>
+        </a>
+      </div>
     </div>
-    
-    <div class="mySlides">
-        <div class="numbertext">2 / 6</div>
-        <img src="./img/gato1.jpg" style="width:100%">
-    </div>
-    
-    <!-- <div class="mySlides">
-        <div class="numbertext">3 / 6</div>
-        <img src="./img/gato2.jpg" style="width:100%">
-    </div> -->
-    
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
-    
-    <div class="caption-container">
-        <p id="caption"></p>
-    </div>
-    
-    <div class="row">
-        <div class="column">
-            <img class="demo cursor" src="./img/gato.jpg" style="width:100%" onclick="currentSlide(1)" alt="Gato sentado">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="./img/gato1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Gato contento">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="./img/gato2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Gato dormilón">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="./img/gato.jpg" style="width:100%" onclick="currentSlide(1)" alt="Gato peresozo">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="./img/gato1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Gato esperando">
-        </div>
-        <!-- <div class="column">
-            <img class="demo cursor" src="./img/gato2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Gato vestido">
-        </div> -->
-    </div>
+  </template>
 </div>
 
-<h4 style="text-align:center">Para carrusel</h4>
-<!-- termina carrusel -->
+<!-- FIN TARJETAS DE CATEGORIA --> 
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-    <!-- Automatic Slideshow Images -->
-    <div class="mySlides w3-display-container w3-center">
-      <img src="./img/gato.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>Los Angeles</h3>
-        <p><b>We had the best time playing at Venice Beach!</b></p>   
-      </div>
-    </div>
-    <div class="mySlides w3-display-container w3-center">
-      <img src="./img/gato.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>New York</h3>
-        <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
-      </div>
-    </div>
-    <div class="mySlides w3-display-container w3-center">
-      <img src="./img/gato.jpg" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>Chicago</h3>
-        <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-      </div>
-    </div>
-  
-    <!-- The Band Section -->
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-      <h2 class="w3-wide">THE BAND</h2>
-      <p class="w3-opacity"><i>We love music</i></p>
-      <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <div class="w3-row w3-padding-32">
-        <div class="w3-third">
-          <p>Name</p>
-          <img src="./img/gato.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-        </div>
-        <div class="w3-third">
-          <p>Name</p>
-          <img src="./img/gato.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-        </div>
-        <div class="w3-third">
-          <p>Name</p>
-          <img src="./img/gato.jpg" class="w3-round" alt="Random Name" style="width:60%">
-        </div>
-      </div>
-    </div>
-  
-    <!-- The Tour Section -->
-    <div class="w3-black" id="tour">
-      <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-        <h2 class="w3-wide w3-center">TOUR DATES</h2>
-        <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
-  
-        <ul class="w3-ul w3-border w3-white w3-text-grey">
-          <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-          <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-          <li class="w3-padding">November <span class="w3-badge w3-right w3-margin-right">3</span></li>
-        </ul>
-  
-        <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-          <div class="w3-third w3-margin-bottom">
-            <img src="./img/gato.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white">
-              <p><b>New York</b></p>
-              <p class="w3-opacity">Fri 27 Nov 2016</p>
-              <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-              <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+  <!-- CARDS DE PRODUCTOS -->
+  <!-- <div class="cards">
+    <template id="template-card">
+        <div class="overflow-auto" id="overflow-auto">
+            <h3 style="text-align:center"></h3>
+          
+            <div class="card">
+              <a class="asupagina">
+                <img width="100%">
+              </a>
+              <h2 class="titulo-producto"></h2>
+              <p class="price"></p>
+              <p class="descripcion-producto"></p>
+              <p class="p-button"><button class="button">Sellecionar</button></p>
             </div>
           </div>
-          <div class="w3-third w3-margin-bottom">
-            <img src="./img/gato.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white">
-              <p><b>Paris</b></p>
-              <p class="w3-opacity">Sat 28 Nov 2016</p>
-              <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-              <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-            </div>
-          </div>
-          <div class="w3-third w3-margin-bottom">
-            <img src="./img/gato.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white">
-              <p><b>San Francisco</b></p>
-              <p class="w3-opacity">Sun 29 Nov 2016</p>
-              <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-              <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <!-- Ticket Modal -->
-    <div id="ticketModal" class="w3-modal">
-      <div class="w3-modal-content w3-animate-top w3-card-4">
-        <header class="w3-container w3-teal w3-center w3-padding-32"> 
-          <span onclick="document.getElementById('ticketModal').style.display='none'" 
-         class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-          <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-        </header>
-        <div class="w3-container">
-          <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-          <input class="w3-input w3-border" type="text" placeholder="How many?">
-          <p><label><i class="fa fa-user"></i> Send To</label></p>
-          <input class="w3-input w3-border" type="text" placeholder="Enter email">
-          <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-          <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-          <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
-        </div>
-      </div>
-    </div>
-  
-    <!-- The Contact Section -->
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-      <h2 class="w3-wide w3-center">CONTACT</h2>
-      <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
-      <div class="w3-row w3-padding-32">
-        <div class="w3-col m6 w3-large w3-margin-bottom">
-          <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
-          <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-          <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
-        </div>
-        <div class="w3-col m6">
-          <form action="/action_page.php" target="_blank">
-            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-              <div class="w3-half">
-                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-              </div>
-              <div class="w3-half">
-                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-              </div>
-            </div>
-            <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-            <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    
-  <!-- End Page Content -->
-  </div>
-  
-  <!-- Image of location/map -->
-  <img src="./img/gato.jpg" class="w3-image w3-greyscale-min" style="width:100%">
-  
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-  </footer>
+    </template>
+  </div> -->
 
-
-<script src="./index.js"></script>
+  <!-- TERMINA CARDS DE PRODUCTOS -->
+  
+  <script src="./index.js"></script>
+  <!-- <script src="../productos.js"></script> -->
+  <script src="./categorias.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
 </html>
