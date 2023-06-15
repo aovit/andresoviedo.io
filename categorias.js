@@ -13,9 +13,9 @@ const data = async () => {
           $template.querySelector("img").setAttribute("src", el.imagen);
           $template.querySelector("img").setAttribute("alt", el.titulo);
           $template.querySelector("#seleccionar").setAttribute("href", el.supagina);
-          $template.querySelector("#seleccionar").setAttribute("target", "_blank");
+          $template.querySelector("#seleccionar").setAttribute("Target", "_blank");
           $template.querySelector("a").setAttribute("href", el.supagina);
-          $template.querySelector("a").setAttribute("target", "_blank");
+          //$template.querySelector("a").setAttribute("Target", "_blank");
           let $clone = document.importNode($template, true);
           $fragment.appendChild($clone);
         });
