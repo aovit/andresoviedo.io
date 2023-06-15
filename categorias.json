@@ -2,7 +2,7 @@
     {
         "titulo": "BLUSAS",
         "imagen": "./img/perro11.jpg",
-        "supagina": "./paginas-productos/blusas.html"
+        "supagina": "./blusas.html"
     },
     {
         "titulo": "VESTIDOS",
