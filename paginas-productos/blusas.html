@@ -212,7 +212,7 @@
 
       <!-- FIN CARDS DE PRODUCTOS -->
       
-      <script src="../index.js"></script>
+      <!-- <script src="../index.js"></script> -->
       <script src="../productos.js"></script>
       <!-- <script src="../categorias.js"></script> -->
       <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -221,15 +221,26 @@
         const imageBox = document.querySelector(".image-box")
         const nextBtn = document.getElementById("next-btn")
         const prevBtn = document.getElementById("prev-btn")
+
+        
         
 
 
-        document.addEventListener("click", e => {
-            e.stopImmediatePropagation()
+        document.addEventListener("click", function (e) {
+            e.stopPropagation()
 
             let numImage = 1;
-            let id = e.target.parentElement.children[0].dataset.id;
             
+            const id = e.target.parentElement.children[0].dataset.id;
+            localStorage.setItem("id", id)
+
+            currentImagedisplay(id, numImage)
+            function currentImagedisplay(id, numImage) {
+                
+                imageBox.style.background = `url("/aovit.github.io/img/perro${id}${numImage}.jpg")
+                center/cover no-repeat`;
+                //console.log(id, numImage)
+            }
             
             if(e.target.matches(".zoom-text")) {
                 e.stopImmediatePropagation()
@@ -238,41 +249,42 @@
                 imageView.style.display = "block";
                 imageBox.style.display = "block";
                 
-                currentImagedisplay(id, numImage)
-            }
-            function currentImagedisplay(id, numImage) {
                 
-                imageBox.style.background = `url("/aovit.github.io/img/perro${id}${numImage}.jpg")
-                center/cover no-repeat`;
-                //console.log(id, numImage)
+                prevBtn.addEventListener("click", (e) => {
+                    e.stopImmediatePropagation()
+                    let id = localStorage.getItem("id")
+                    numImage--;
+                    if(numImage < 1) {
+                        numImage = 3;
+                    }
+                    currentImagedisplay(id, numImage)
+                })
+                
+                nextBtn.addEventListener("click", function(e) {
+                    e.stopImmediatePropagation()
+                    let id = localStorage.getItem("id")
+
+                    numImage++;
+                    if(numImage > 3) {
+                        numImage = 1;
+                    }
+                    currentImagedisplay(id, numImage)
+
+                })
             }
-            
-            prevBtn.addEventListener("click", function(e) {
-                e.stopImmediatePropagation()
-                id = id;
-                numImage--;
-                if(numImage < 1) {
-                    numImage = 3;
-                }
-                currentImagedisplay(id, numImage)
-                console.log(id, numImage)
-            })
-            
-            nextBtn.addEventListener("click", function(e) {
-                e.stopImmediatePropagation()
-                numImage++;
-                if(numImage > 3) {
-                    numImage = 1;
-                }
-                currentImagedisplay(id, numImage)
-                console.log(id, numImage)
-            })
-            if(e.target.matches(".image-view")) {
+            //console.log(id)
+            if(e.target.matches(".image-view") || e.target.matches(".image-box")) {
                 e.stopImmediatePropagation()
                 imageView.style.display = "none";
                 imageBox.style.display = "none";
-                document.location.reload()
+                //document.location.reload()
+                //console.log(id)
             }
+            
+        }, {
+            capture: false,
+            once: false,
+            passive: false
         })
 
         
