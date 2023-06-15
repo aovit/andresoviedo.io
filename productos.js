@@ -6,7 +6,7 @@ const $fragment1 = document.createDocumentFragment();
 
 const data = async () => {
     try {
-        let res = await fetch("../b-datos/articulos.json"),
+        let res = await fetch("./b-datos/articulos.json"),
         json = await res.json()
 
         json.forEach((el) => {
