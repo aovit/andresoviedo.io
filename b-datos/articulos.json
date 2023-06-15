@@ -42,5 +42,16 @@
         "descripcion": "falda 1 modal",
         "precio": 20000,
         "supagina": "../abuotcopy2.html"
+    },
+    {
+        "id": 2,
+        "tipo": "vestidos",
+        "titulo": "vestido 2",
+        "imagen1": "../img/perro21.jpg",
+        "imagen2": "../img/perro22.jpg",
+        "imagen3": "../img/perro23.jpg",
+        "descripcion": "vestido 1 modal",
+        "precio": 50000,
+        "supagina": "../abuotcopy2.html"
     }
 ]
