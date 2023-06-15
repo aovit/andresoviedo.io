@@ -2,12 +2,12 @@
     {
         "titulo": "BLUSAS",
         "imagen": "./img/perro11.jpg",
-        "supagina": "./blusas.html"
+        "supagina": "./paginas-productos/blusas.html"
     },
     {
         "titulo": "VESTIDOS",
         "imagen": "./img/perro21.jpg",
-        "supagina": "./abuotcopy2.html"
+        "supagina": "./paginas-productos/vestidos.html"
     },
     {
         "titulo": "PANTALONES",

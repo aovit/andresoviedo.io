@@ -6,7 +6,7 @@ const $fragment1 = document.createDocumentFragment();
 
 const data = async () => {
     try {
-        let res = await fetch("./b-datos/articulos.json"),
+        let res = await fetch("../b-datos/articulos.json"),
         json = await res.json()
 
         json.forEach((el) => {
@@ -17,6 +17,9 @@ const data = async () => {
             $template1.querySelector(".price").textContent = "$" + el.precio;
             $template1.querySelector(".descripcion-producto").textContent = el.descripcion;
             $template1.querySelector(".zoom-text").setAttribute("data-id", el.id)
+            $template1.querySelector("#overflow-auto").removeAttribute("class");
+            $template1.querySelector("#overflow-auto").classList.add("overflow-auto");
+            $template1.querySelector("#overflow-auto").classList.add(el.tipo);
             
 
             
