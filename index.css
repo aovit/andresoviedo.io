@@ -670,3 +670,10 @@ body, html {
 }
 
  /* FIN SLIDER DE ABUOT */
+
+
+
+ .imagen-oculta img {
+  width: 0.1px;
+  height: auto;
+}
