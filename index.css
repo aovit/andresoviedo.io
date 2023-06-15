@@ -674,6 +674,6 @@ body, html {
 
 
  .imagen-oculta img {
-  width: 0.1px;
+  width: 10px;
   height: auto;
 }
