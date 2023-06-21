@@ -10,18 +10,23 @@
         "supagina": "./paginas-productos/nuevo-stock.html"
     },
     {
-        "titulo": "PANTALONES",
+        "titulo": "BUSOS HOMBRE",
         "imagen": "./img/perro31.jpg",
-        "supagina": "./abuotcopy2.html"
+        "supagina": "./paginas-productos/busos-hombre.html"
     },
     {
-        "titulo": "FALDAS",
+        "titulo": "BUSOS DAMA",
         "imagen": "./img/perro41.jpg",
-        "supagina": "./abuotcopy2.html"
+        "supagina": "./paginas-productos/busos-dama.html"
     },
     {
-        "titulo": "rosas",
-        "imagen": "./img/perro41.jpg",
-        "supagina": "./abuotcopy2.html"
+        "titulo": "SUDADERA COMPLETA HOMBRE",
+        "imagen": "./img/perro51.jpg",
+        "supagina": "./paginas-productos/sudadera-completa-hombre.html"
+    },
+    {
+        "titulo": "SUDADERA COMPLETA DAMA",
+        "imagen": "./img/perro61.jpg",
+        "supagina": "./paginas-productos/sudadera-completa-dama.html"
     }
 ]
