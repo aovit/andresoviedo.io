@@ -2,8 +2,8 @@
 :root {
   --celular: 450px;
   --base: black;
-  --principal: rgb(48, 131, 255);
-  --color-link: rgb(48, 131, 255);
+  --principal: rgb(42, 34, 145);
+  --color-link: rgb(42, 34, 145);
   --color-link-hover: black;
   --background-principal: white;
   --letra-menu-desktop: 15px;
@@ -576,7 +576,7 @@ html {
 #container-slider .arrowPrev,
 #container-slider .arrowNext {
   font-size: 30pt;
-  color: rgba(204, 204, 204, 0.65);
+  color: rgba(--principal);
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -610,7 +610,7 @@ html {
   margin-bottom: 20px;
 }
 #slider li .content_slider {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   padding: 10px 125px;
 }
 .content_slider {
@@ -629,7 +629,7 @@ html {
   letter-spacing: 1px;
   padding: 10px 50px;
   border: 1px solid #ccc;
-  background: rgba(13, 13, 13, 0.55);
+  background: rgba(13, 13, 13, 0.70);
   border-radius: 31px;
   text-decoration: none;
   transition: 0.5s all;
@@ -637,6 +637,9 @@ html {
 .btnSlider:hover {
   background: #111;
   border: 1px solid #111;
+}
+.btnSlider a:hover {
+  color: red;
 }
 .listslider {
   position: absolute;

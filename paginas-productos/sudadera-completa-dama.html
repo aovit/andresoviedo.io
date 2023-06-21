@@ -143,17 +143,31 @@
             }
           }
 
-          .vestidos {
+          .buso-dama {
             display: none;
           }
 
-          .pantalones {
+          .buso-hombre {
             display: none;
           }
 
-          .faldas {
+          .sudadera-completa-hombre {
             display: none;
           }
+
+          /* .sudadera-completa-dama {
+            display: none;
+          } */
+
+          .camiseta-hombre {
+            display: none;
+          }
+
+          .camiseta-dama {
+            display: none;
+          }
+
+          
 
       
 
@@ -237,14 +251,6 @@
         const prevBtn = document.getElementById("prev-btn")
         const categoria = document.getElementById("overflow-auto");
 
-        if(categoria.classList.contains("blusas")) {
-          let blusas = document.querySelector("blusas");
-          blusas.style.display = "block";
-          categoria.style.display = "none";
-        }
-        
-
-
         document.addEventListener("click", function (e) {
             e.stopPropagation()
 
@@ -307,70 +313,6 @@
             once: false,
             passive: false
         })
-
-        
-        
-
-        /* document.addEventListener("click", e=> {
-            e.preventDefault();
-            let parent = e.target.parentElement.children[5];
-            if(e.target.matches(".card img")) {
-                let parent0 = parent.children[0].children[0].children[0];
-                let parent1 = parent.children[0].children[0].children[1];
-                let parent2 = parent.children[0].children[0].children[2];
-                parent.style.display = "block";
-                parent1.style.display = "none";
-                parent2.style.display = "none";
-                console.log(parent1)
-                document.addEventListener("click", e=> {
-                    if(e.target.matches(".card .close")) {
-                        parent.style.display = "none"
-                    }
-                    if(e.target.matches(".card #imagen1, #imagen2, #imagen3")) {
-                        parent.style.display = "block"
-                    } */
-                    /* e.preventDefault();
-                    if(e.target.matches(".card .close")) {
-                        parent.style.display = "none"
-                    }
-                    if(e.target.matches(".card img")) {
-                        parent.style.display = "block"
-                    }
-                    let slideIndex = 1;
-                    let slides = e.target.parentElement.children[0].children;
-                    slides[0].style.display = "none";  
-                    slides[1].style.display = "none";  
-                    slides[2].style.display = "block"; 
-                    if(e.target.matches(".card .prev")) {
-                        //plusSlides(-1)
-                        slides[0].style.display = "none";  
-                        slides[1].style.display = "none";  
-                        slides[2].style.display = "block";  
-                    } */
-                    /* if(e.target.matches(".card .next")) {
-                        plusSlides(1)
-                    }
-                    function plusSlides(n) {
-                        showSlides(slideIndex += n);
-                    }
-                    showSlides(slideIndex);
-                    function showSlides(n) {
-                        let i;
-                        let slides = e.target.parentElement.children[0].children;
-                        console.log(slides.length)
-                        if (n > slides.length) {slideIndex = 1}    
-                        if (n < 1) {slideIndex = slides.length}
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";  
-                        }
-                        slides[slideIndex-1].style.display = "block";
-                    } */
-                /* })
-            }
-            
-        }) */
-
       </script>
 </body>
 </html>
-

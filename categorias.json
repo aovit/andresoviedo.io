@@ -1,13 +1,13 @@
 [
     {
-        "titulo": "BLUSAS",
-        "imagen": "./img/perro11.jpg",
-        "supagina": "./paginas-productos/blusas.html"
+        "titulo": "Promociones",
+        "imagen": "./img/promocion.jpg",
+        "supagina": "./paginas-productos/promociones.html"
     },
     {
-        "titulo": "VESTIDOS",
+        "titulo": "NUEVA COLLECCIÓN",
         "imagen": "./img/perro21.jpg",
-        "supagina": "./paginas-productos/vestidos.html"
+        "supagina": "./paginas-productos/nuevo-stock.html"
     },
     {
         "titulo": "PANTALONES",
@@ -16,6 +16,11 @@
     },
     {
         "titulo": "FALDAS",
+        "imagen": "./img/perro41.jpg",
+        "supagina": "./abuotcopy2.html"
+    },
+    {
+        "titulo": "rosas",
         "imagen": "./img/perro41.jpg",
         "supagina": "./abuotcopy2.html"
     }

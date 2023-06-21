@@ -20,8 +20,11 @@ const data = async () => {
             $template1.querySelector("#overflow-auto").removeAttribute("class");
             $template1.querySelector("#overflow-auto").classList.add("overflow-auto");
             $template1.querySelector("#overflow-auto").classList.add(el.tipo);
+            $template1.querySelector("#overflow-auto").classList.add(el.no_promocion);
+            $template1.querySelector("#overflow-auto").classList.add(el.no_nuevo);
             
-
+            const imagenes = el.imagen2
+            console.log(imagenes)
             
             
 
