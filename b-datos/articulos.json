@@ -9,7 +9,21 @@
         "descripcion": "blusa 1 modal",
         "precio-sin-descuento": 30000,
         "precio": 20000,
-        "supagina": "../abuotcopy2.html"
+        "supagina": "../abuotcopy2.html",
+        "imagenes_colores": [
+            {
+                "imagen": "../img/perro11.jpg",
+                "color": "negro"
+            },
+            {
+                "imagen": "../img/perro21.jpg",
+                "color": "rojo"
+            },
+            {
+                "imagen": "../img/perro31.jpg",
+                "color": "azul"
+            }
+        ]
     },
     {
         "id": 2,
@@ -22,6 +36,7 @@
         "precio-sin-descuento": 30000,
         "precio": 20000,
         "supagina": "../abuotcopy2.html"
+        
     },
     {
         "id": 3,
@@ -49,15 +64,29 @@
     },
     {
         "id": 5,
-        "no_promocion": "no-promocion",
+        "no_promocion": "si-promocion",
         "no_nuevo": "no-nuevo", 
         "tipo": "camiseta-hombre",
         "titulo": "Camiseta de Hombre",
         "imagen1": "../img/perro51.jpg",
         "descripcion": "blusa 1 modal",
         "precio-sin-descuento": 30000,
-        "precio": 20000,
-        "supagina": "../abuotcopy2.html"
+        "precio": 10000,
+        "supagina": "../abuotcopy2.html",
+        "imagenes_colores": [
+            {
+                "imagen": "../img/perro21.jpg",
+                "color": "negro"
+            },
+            {
+                "imagen": "../img/perro22.jpg",
+                "color": "rojo"
+            },
+            {
+                "imagen": "../img/perro23.jpg",
+                "color": "azul"
+            }
+        ]
     },
     {
         "id": 6,

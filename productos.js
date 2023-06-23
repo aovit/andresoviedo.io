@@ -14,6 +14,7 @@ const data = async () => {
             $template1.querySelector(".imagen-principal").setAttribute("src", el.imagen1);
             $template1.querySelector(".imagen-principal").setAttribute("alt", el.titulo);
             $template1.querySelector(".titulo-producto").textContent = el.titulo;
+            $template1.querySelector(".titulo-producto").setAttribute("data-id", el.id)
             $template1.querySelector(".price").textContent = "$" + el.precio;
             $template1.querySelector(".descripcion-producto").textContent = el.descripcion;
             $template1.querySelector(".zoom-text").setAttribute("data-id", el.id)
@@ -23,8 +24,6 @@ const data = async () => {
             $template1.querySelector("#overflow-auto").classList.add(el.no_promocion);
             $template1.querySelector("#overflow-auto").classList.add(el.no_nuevo);
             
-            const imagenes = el.imagen2
-            console.log(imagenes)
             
             
 
@@ -80,6 +79,7 @@ const data = async () => {
 
 document.addEventListener("DOMContentLoaded", data)
 
+
 /* 
 const imageView = document.querySelector(".image-view")
 const nextBtn = document.getElementById("next-btn")
@@ -93,4 +93,231 @@ console.log(lista)
 let ss = document.querySelectorAll("zoom-text");
 console.log(ss) */
         
+
+const imageView = document.querySelector(".image-view")
+const imageBox = document.querySelector(".image-box")
+const infoTarjeta = document.querySelector(".info-tarjeta")
+const nextBtn = document.getElementById("next-btn")
+const prevBtn = document.getElementById("prev-btn")
+const sliderColores = document.querySelector(".slider-colores");
+
+
+
+
+
+document.addEventListener("click", function (e) {
+    e.stopPropagation()
+
+    let numImage = 1;
+    
+    const id = e.target.parentElement.children[0].dataset.id;
+    localStorage.setItem("id", id)
+
+    
+
+
+    if(e.target.matches(".titulo-producto")) {
+        e.stopImmediatePropagation()
+
+        let id = e.target.parentElement.children[1].dataset.id;
+        localStorage.setItem("idTarjeta", id)
+        const $element = document.querySelector(".info-tarjeta"); // assuming ul exists
+        const $template = document.getElementById("template-infoTarjeta").content;
+        const $fragment = document.createDocumentFragment();
+        const data = async () => {
+            try {
+                let res = await fetch("../b-datos/articulos.json"),
+                json = await res.json()
+                console.log(id)
+                json.forEach((el) => {
+                    
+                    if(el.id == id) {
+                        $template.getElementById("titulo-tarjeta").textContent = el.titulo;
+                        $template.querySelector(".categoria-tarjeta").textContent = el.tipo;
+                        $template.querySelector(".imagen-tarjeta").setAttribute("src", el.imagen1);
+                        $template.querySelector(".imagen-tarjeta").setAttribute("alt", el.titulo);
+                        $template.getElementById("color-escoger").textContent = el.imagenes_colores[0].color;
+                        $template.getElementById("imagen-escoger").setAttribute("src", el.imagenes_colores[0].imagen);
+                        $template.getElementById("imagen-escoger").setAttribute("alt", el.imagenes_colores[0].color);
+
+
+
+                        console.log(el.titulo)
+                        let $clone = document.importNode($template, true);
+                        $fragment.appendChild($clone);
+                    }
+                    
+                    
+                })
+                $element.appendChild($fragment);
+            } catch (err) {
+                
+            }
+        }
+        data()
+        infoTarjeta.style.display = "block"
+    }
+    
+    
+
+    document.addEventListener("click", function(e){
+        e.stopPropagation()
+        if(e.target.matches("#imagen-escoger") || e.target.matches(".fa-chevron-circle-right")) {
+            e.stopImmediatePropagation()
+            console.log(localStorage.getItem("idTarjeta"))
+            let id = localStorage.getItem("idTarjeta")
+            
+            const data = async () => {
+                try {
+                    let res = await fetch("../b-datos/articulos.json"),
+                    json = await res.json()
+                    json.forEach((el) => {
+                        if(el.id == id) {
+                            document.getElementById("li-1").style.backgroundImage = `url(${el.imagenes_colores[0].imagen})`
+                            document.getElementById("li-2").style.backgroundImage = `url(${el.imagenes_colores[1].imagen})`
+                            document.getElementById("li-3").style.backgroundImage = `url(${el.imagenes_colores[2].imagen})`
+                            document.getElementById("li-1").setAttribute("data-url-imagen", el.imagenes_colores[0].imagen)
+                            document.getElementById("li-2").setAttribute("data-url-imagen", el.imagenes_colores[1].imagen)
+                            document.getElementById("li-3").setAttribute("data-url-image", el.imagenes_colores[2].imagen)
+                            /* $template.getElementById("titulo-tarjeta").textContent = el.titulo;
+                            $template.querySelector(".categoria-tarjeta").textContent = el.tipo;
+                            $template.querySelector(".imagen-tarjeta").setAttribute("src", el.imagen1);
+                            $template.querySelector(".imagen-tarjeta").setAttribute("alt", el.titulo);
+                            $template.getElementById("color-escoger").textContent = el.imagenes_colores[0].color;
+                            $template.getElementById("imagen-escoger").setAttribute("src", el.imagenes_colores[0].imagen);
+                            $template.getElementById("imagen-escoger").setAttribute("alt", el.imagenes_colores[0].color); */
+                            /* console.log(el.titulo)
+                            let $clone = document.importNode($template, true);
+                            $fragment.appendChild($clone); */
+                        }
+                    })
+                    sliderColores.style.display = "block"
+                } catch (err) {
+                }
+            }
+            data()
+        }
+
+        document.addEventListener("click", function(e) {
+            e.stopImmediatePropagation()
+            if(e.target.matches(".btnSlider")) {
+                console.log(e.target.parentElement.parentElement.parentElement.parentElement.children)
+            }
+        })
+    })
+
+    currentImagedisplay(id, numImage)
+    function currentImagedisplay(id, numImage) {
+        
+        imageBox.style.background = `url("../img/perro${id}${numImage}.jpg")
+        center/cover no-repeat`;
+        //console.log(id, numImage)
+    }
+
+   
+
+    
+    if(e.target.matches(".zoom-text")) {
+        e.stopImmediatePropagation()
+        //let numImage = 1;
+        //console.log(id)
+        imageView.style.display = "block";
+        imageBox.style.display = "block";
+        
+        
+        prevBtn.addEventListener("click", (e) => {
+            e.stopImmediatePropagation()
+            let id = localStorage.getItem("id")
+            numImage--;
+            if(numImage < 1) {
+                numImage = 3;
+            }
+            currentImagedisplay(id, numImage)
+            console.log(id, numImage)
+
+        })
+        
+        nextBtn.addEventListener("click", function(e) {
+            e.stopImmediatePropagation()
+            let id = localStorage.getItem("id")
+
+            numImage++;
+            if(numImage > 3) {
+                numImage = 1;
+            }
+            currentImagedisplay(id, numImage)
+            console.log(id, numImage)
+        })
+    }
+    //console.log(id)
+    if(e.target.matches(".image-view") || e.target.matches(".image-box")) {
+        e.stopImmediatePropagation()
+        imageView.style.display = "none";
+        imageBox.style.display = "none";
+        //document.location.reload()
+        //console.log(id)
+    }
+    
+}, {
+    capture: false,
+    once: false,
+    passive: false
+})
+
+
+/* SLIDER DE ESCOGER COLORES */
+
+if(document.querySelector('#container-slider')){
+    setInterval('fntExecuteSlide("next")',5000);
+  }
+  //------------------------------ LIST SLIDER -------------------------
+  if(document.querySelector('.listslider')){
+    let link = document.querySelectorAll(".listslider li a");
+    link.forEach(function(link) {
+       link.addEventListener('click', function(e){
+          e.preventDefault();
+          let item = this.getAttribute('itlist');
+          let arrItem = item.split("_");
+          fntExecuteSlide(arrItem[1]);
+          return false;
+       });
+     });
+  }
+  
+  function fntExecuteSlide(side){
+     let parentTarget = document.getElementById('slider');
+     let elements = parentTarget.getElementsByTagName('li');
+     let curElement, nextElement;
+  
+     for(var i=0; i<elements.length;i++){
+  
+         if(elements[i].style.opacity==1){
+             curElement = i;
+             break;
+         }
+     }
+     if(side == 'prev' || side == 'next'){
+  
+         if(side=="prev"){
+             nextElement = (curElement == 0)?elements.length -1:curElement -1;
+         }else{
+             nextElement = (curElement == elements.length -1)?0:curElement +1;
+         }
+     }else{
+         nextElement = side;
+         side = (curElement > nextElement)?'prev':'next';
+  
+     }
+     //RESALTA LOS PUNTOS
+     let elementSel = document.getElementsByClassName("listslider")[0].getElementsByTagName("a");
+     elementSel[curElement].classList.remove("item-select-slid");
+     elementSel[nextElement].classList.add("item-select-slid");
+     elements[curElement].style.opacity=0;
+     elements[curElement].style.zIndex =0;
+     elements[nextElement].style.opacity=1;
+     elements[nextElement].style.zIndex =1;
+  }
+  
+
+/* FIN SLIDER DE ESCOGER COLORES */
 

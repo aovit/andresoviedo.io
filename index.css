@@ -701,3 +701,193 @@ html {
 }
 
 /* FIN SLIDER DE ABUOT */
+
+
+/* CARRUSEL DE IMAGENES TEMPLATE DE TARJETAS */
+
+
+.img-container img {
+  width: 100%;
+  display: block;
+}
+.img-container {
+  background-color: red;
+  position: relative;
+}
+
+.content {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease;
+  color: #fff;
+  opacity: 0;
+}
+
+.img-container:hover .content {
+  opacity: 1;
+  background: tomato;
+}
+
+.zoom-text {
+  width: 80px;
+  height: 80px;
+  background: burlywood;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: transform 0.2s linear;
+}
+
+.content h2 {
+  padding: 15px 0;
+}
+
+.zoom-text:hover {
+  cursor: zoom-in;
+  transform: scale(1.1);
+}
+
+.image-view {
+  position: fixed;
+  top: 0;
+  height: 300vw;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  display: none;
+}
+
+.image-box {
+  width: 80vw;
+  height: 80vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background: tomato; */
+  display: none;
+}
+
+
+
+
+#prev-btn, #next-btn {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+#prev-btn {
+  border-right: 40px solid grey;
+  left: 5px;
+}
+
+#next-btn {
+  border-left: 40px solid grey;
+  right: 5px;
+}
+
+#next-btn:hover, #prev-btn:hover {
+  opacity: 0.6;
+}
+
+/* *************** media queries************* */
+
+@media (max-width: 992px) {
+  .container{
+    grid-template-columns: 1fr;
+  }
+  .image-box{
+    height: 85vh;
+  }
+}
+
+@media(max-width: 678px) {
+  .image-box{
+    height: 75vh;
+  }
+}
+
+@media(max-width: 343px) {
+  .image-box{
+    height: 65vh;
+  }
+}
+
+/* FIN CARRUSEL IMAGENES TEMPLATE DE TARJETAS */
+
+/* TARJETA DE PRODUCTO */
+
+.info-tarjeta {
+  /* display: none;
+  position: fixed;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); */
+  display: none;
+  position: fixed;
+  padding: 5px;
+  padding-left: 12px;
+  padding-top: 20px;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: white;
+  overflow: auto;
+}
+
+.info-tarjeta img {
+  width: 100%;
+}
+
+.color-tarjeta div {
+  width: 70%;
+  float: left
+}
+
+.color-tarjeta img {
+  width: 19%;
+  float: left;
+}
+
+.color-tarjeta i {
+  width: 10%;
+}
+
+.slider-colores {
+  display: none;
+  position: fixed;
+  padding: 5px;
+  padding-left: 12px;
+  padding-top: 20px;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: white;
+  overflow: auto;
+}
+
+/* FIN TARJETA DE PRODUCTO */
