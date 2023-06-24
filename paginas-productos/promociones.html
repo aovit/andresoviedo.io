@@ -90,55 +90,68 @@
           <p class="categoria-tarjeta"></p>
           <h6 id="titulo-tarjeta"></h6>
           <img class="imagen-tarjeta">
-          <div class="color-tarjeta">
-            <div>
+          <div class="color-tarjeta" id="color-tarjeta">
+            <div id="p-color-escoger">
               <p>color:</p>
               <p id="color-escoger"></p>
             </div>
             <img id="imagen-escoger">
-            <i class="fas fa-chevron-circle-right"></i>
+            <div id="divv">
+              <a href="javascript: fntExecuteSlide('next');" class="arrowNext" id="arrowNext">
+                <i class="fas fa-chevron-circle-right"></i>
+            </div>
+            </a>
+          </div>
+          <div class="price-product">
+            <p><strong>Antes: </strong><i><del id="precio-anterior"></dels></i></p>
+            <p><strong>Ahora: </strong><strong id="price-now"></strong></p>
           </div>
         </template>
       </div>
 
       <div class="slider-colores">
-        <section id="container-slider">
-          <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev"
-            ><i class="fas fa-chevron-circle-left"></i
-          ></a>
-          <a href="javascript: fntExecuteSlide('next');" class="arrowNext"
-            ><i class="fas fa-chevron-circle-right"></i
-          ></a>
-          <ul class="listslider">
-            <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
-            <li><a itlist="itList_1" href="#"></a></li>
-            <li><a itlist="itList_2" href="#"></a></li>
-          </ul>
-          <ul id="slider">
-            <li id="li-1"
-              style="
-                z-index: 10;
-                opacity: 1;
-              "
-            >
-            <div class="content_slider">
-              <div>
-                <button class="btnSlider">Ver Color</button>
+        <div class="slider-colores-interior">
+          <div>
+            <p><b>Escoge Color</b></p>
+          </div>
+          <section id="container-slider">
+            <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev"
+              ><i class="fas fa-chevron-circle-left"></i
+            ></a>
+            <a href="javascript: fntExecuteSlide('next');" class="arrowNext"
+              ><i class="fas fa-chevron-circle-right"></i
+            ></a>
+            <ul class="listslider">
+              <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+              <li><a itlist="itList_1" href="#"></a></li>
+              <li><a itlist="itList_2" href="#"></a></li>
+            </ul>
+            <ul id="slider">
+              <li id="li-1"
+                style="
+                  z-index: 10;
+                  opacity: 1;
+                "
+              >
+              <div class="content_slider">
+                <div>
+                  <button id="btn-1" class="btnSlider">Ver más</button>
+                </div>
               </div>
-            </div>
-            </li>
-            <li id="li-2"><div class="content_slider">
-              <div>
-                <button class="btnSlider">Ver Color</button>
-              </div>
-            </div></li>
-            <li id="li-3"><div class="content_slider">
-              <div>
-                <button class="btnSlider">Ver Color</button>
-              </div>
-            </div></li>
-          </ul>
-        </section>
+              </li>
+              <li id="li-2"><div class="content_slider">
+                <div>
+                  <button id="btn-2" class="btnSlider">Ver más</button>
+                </div>
+              </div></li>
+              <li id="li-3"><div class="content_slider">
+                <div>
+                  <button id="btn-3" class="btnSlider">Ver más</button>
+                </div>
+              </div></li>
+            </ul>
+          </section>
+        </div>
       </div>
 
       

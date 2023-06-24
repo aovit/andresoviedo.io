@@ -7,7 +7,7 @@
         "titulo": "Buso hombre promoción",
         "imagen1": "../img/perro11.jpg",
         "descripcion": "blusa 1 modal",
-        "precio-sin-descuento": 30000,
+        "precio_anterior": 30000,
         "precio": 20000,
         "supagina": "../abuotcopy2.html",
         "imagenes_colores": [
@@ -16,12 +16,12 @@
                 "color": "negro"
             },
             {
-                "imagen": "../img/perro21.jpg",
+                "imagen": "../img/perro31.jpg",
                 "color": "rojo"
             },
             {
-                "imagen": "../img/perro31.jpg",
-                "color": "azul"
+                "imagen": "../img/perro21.jpg",
+                "color": "blanco"
             }
         ]
     },
@@ -33,7 +33,7 @@
         "titulo": "Buso Dama Nuevo en Stock",
         "imagen1": "../img/perro21.jpg",
         "descripcion": "blusa 1 modal",
-        "precio-sin-descuento": 30000,
+        "precio_anterior": 30000,
         "precio": 20000,
         "supagina": "../abuotcopy2.html"
         
@@ -46,7 +46,7 @@
         "titulo": "Sudadera Completa Hombre",
         "imagen1": "../img/perro31.jpg",
         "descripcion": "blusa 1 modal",
-        "precio-sin-descuento": 30000,
+        "precio_anterior": 30000,
         "precio": 20000,
         "supagina": "../abuotcopy2.html"
     },
@@ -58,7 +58,7 @@
         "titulo": "Sudadera Completa Dama",
         "imagen1": "../img/perro41.jpg",
         "descripcion": "blusa 1 modal",
-        "precio-sin-descuento": 30000,
+        "precio_anterior": 30000,
         "precio": 20000,
         "supagina": "../abuotcopy2.html"
     },
@@ -70,7 +70,7 @@
         "titulo": "Camiseta de Hombre",
         "imagen1": "../img/perro51.jpg",
         "descripcion": "blusa 1 modal",
-        "precio-sin-descuento": 30000,
+        "precio_anterior": 30000,
         "precio": 10000,
         "supagina": "../abuotcopy2.html",
         "imagenes_colores": [
@@ -96,7 +96,7 @@
         "titulo": "Camiseta de Dama",
         "imagen1": "../img/perro61.jpg",
         "descripcion": "blusa 1 modal",
-        "precio-sin-descuento": 30000,
+        "precio_anterior": 30000,
         "precio": 20000,
         "supagina": "../abuotcopy2.html"
     }

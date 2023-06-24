@@ -139,6 +139,8 @@ document.addEventListener("click", function (e) {
                         $template.getElementById("color-escoger").textContent = el.imagenes_colores[0].color;
                         $template.getElementById("imagen-escoger").setAttribute("src", el.imagenes_colores[0].imagen);
                         $template.getElementById("imagen-escoger").setAttribute("alt", el.imagenes_colores[0].color);
+                        $template.getElementById("precio-anterior").textContent = `$ ${el.precio_anterior.toLocaleString("en")}.`;
+                        $template.getElementById("price-now").textContent = `$ ${el.precio.toLocaleString("en")}.`;
 
 
 
@@ -162,7 +164,7 @@ document.addEventListener("click", function (e) {
 
     document.addEventListener("click", function(e){
         e.stopPropagation()
-        if(e.target.matches("#imagen-escoger") || e.target.matches(".fa-chevron-circle-right")) {
+        if(e.target.matches(".color-tarjeta img") || e.target.matches(".color-tarjeta p") || e.target.matches(".color-tarjeta path")) {
             e.stopImmediatePropagation()
             console.log(localStorage.getItem("idTarjeta"))
             let id = localStorage.getItem("idTarjeta")
@@ -176,9 +178,12 @@ document.addEventListener("click", function (e) {
                             document.getElementById("li-1").style.backgroundImage = `url(${el.imagenes_colores[0].imagen})`
                             document.getElementById("li-2").style.backgroundImage = `url(${el.imagenes_colores[1].imagen})`
                             document.getElementById("li-3").style.backgroundImage = `url(${el.imagenes_colores[2].imagen})`
-                            document.getElementById("li-1").setAttribute("data-url-imagen", el.imagenes_colores[0].imagen)
-                            document.getElementById("li-2").setAttribute("data-url-imagen", el.imagenes_colores[1].imagen)
-                            document.getElementById("li-3").setAttribute("data-url-image", el.imagenes_colores[2].imagen)
+                            document.getElementById("btn-1").setAttribute("data-url-imagen", el.imagenes_colores[0].imagen)
+                            document.getElementById("btn-2").setAttribute("data-url-imagen", el.imagenes_colores[1].imagen)
+                            document.getElementById("btn-3").setAttribute("data-url-imagen", el.imagenes_colores[2].imagen)
+                            document.getElementById("btn-1").setAttribute("data-url-color", el.imagenes_colores[0].color)
+                            document.getElementById("btn-2").setAttribute("data-url-color", el.imagenes_colores[1].color)
+                            document.getElementById("btn-3").setAttribute("data-url-color", el.imagenes_colores[2].color)
                             /* $template.getElementById("titulo-tarjeta").textContent = el.titulo;
                             $template.querySelector(".categoria-tarjeta").textContent = el.tipo;
                             $template.querySelector(".imagen-tarjeta").setAttribute("src", el.imagen1);
@@ -201,7 +206,19 @@ document.addEventListener("click", function (e) {
         document.addEventListener("click", function(e) {
             e.stopImmediatePropagation()
             if(e.target.matches(".btnSlider")) {
-                console.log(e.target.parentElement.parentElement.parentElement.parentElement.children)
+                console.log(e.target.parentElement.children[0].dataset)
+                let urlImagen = e.target.parentElement.children[0].dataset.urlImagen;
+                let urlColor = e.target.parentElement.children[0].dataset.urlColor;
+                
+                document.querySelector(".imagen-tarjeta").setAttribute("src", urlImagen);
+                document.querySelector(".imagen-tarjeta").setAttribute("alt", urlColor);
+                document.getElementById("imagen-escoger").setAttribute("src", urlImagen);
+                document.getElementById("imagen-escoger").setAttribute("alt", urlColor);
+                document.getElementById("color-escoger").textContent = urlColor;
+
+                console.log(urlImagen)
+
+                sliderColores.style.display = "none"
             }
         })
     })
@@ -321,3 +338,20 @@ if(document.querySelector('#container-slider')){
 
 /* FIN SLIDER DE ESCOGER COLORES */
 
+/* fecha de hoy */
+
+const hoy = new Date()
+const hoy1 = parseInt((hoy.getDate())/7)
+const dias = [
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miercoles",
+    "Jueves",
+    "Viernes",
+    "Sabado"
+]
+const nombreDia = dias[hoy]
+console.log(hoy1)
+
+/* fin fecha hoy */
