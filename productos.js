@@ -3,6 +3,24 @@ const $template1 = document.getElementById("template-card").content;
 const $fragment1 = document.createDocumentFragment();
 
 
+/* fecha de hoy */
+
+const hoy = new Date()
+const hoy1 = hoy.getDay()
+const dias = [
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miercoles",
+    "Jueves",
+    "Viernes",
+    "Sabado"
+]
+//const nombreDia = dias[hoy1]
+const diaHoy = dias[hoy1]
+
+/* fin fecha hoy */
+
 
 const data = async () => {
     try {
@@ -338,20 +356,3 @@ if(document.querySelector('#container-slider')){
 
 /* FIN SLIDER DE ESCOGER COLORES */
 
-/* fecha de hoy */
-
-const hoy = new Date()
-const hoy1 = parseInt((hoy.getDate())/7)
-const dias = [
-    "Domingo",
-    "Lunes",
-    "Martes",
-    "Miercoles",
-    "Jueves",
-    "Viernes",
-    "Sabado"
-]
-const nombreDia = dias[hoy]
-console.log(hoy1)
-
-/* fin fecha hoy */
