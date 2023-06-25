@@ -5,16 +5,16 @@ const $fragment1 = document.createDocumentFragment();
 
 /* fecha de hoy */
 
-const hoy = new Date()
+const hoy = new Date() 
 const hoy1 = hoy.getDay()
 const dias = [
-    "Domingo",
-    "Lunes",
     "Martes",
     "Miercoles",
     "Jueves",
     "Viernes",
-    "Sabado"
+    "Sabado",
+    "Domingo",
+    "Lunes"
 ]
 //const nombreDia = dias[hoy1]
 const diaHoy = dias[hoy1]
@@ -159,6 +159,7 @@ document.addEventListener("click", function (e) {
                         $template.getElementById("imagen-escoger").setAttribute("alt", el.imagenes_colores[0].color);
                         $template.getElementById("precio-anterior").textContent = `$ ${el.precio_anterior.toLocaleString("en")}.`;
                         $template.getElementById("price-now").textContent = `$ ${el.precio.toLocaleString("en")}.`;
+                        $template.getElementById("p-llegada").textContent = `Llega el ${!(diaHoy === "Domingo") ? diaHoy : "Lunes"}`;
 
 
 
