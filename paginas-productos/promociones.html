@@ -106,10 +106,31 @@
             <p><strong>Antes: </strong><i><del id="precio-anterior"></dels></i></p>
             <p><strong>Ahora: </strong><strong id="price-now"></strong></p>
           </div>
+          <form>
+            <script
+                src="https://checkout.epayco.co/checkout.js"
+                class="epayco-button"
+                data-epayco-key="c23acbd9723b87e9df98c337422d0cbb"
+                data-epayco-name="Vestido Mujer Primavera"
+                data-epayco-currency="cop"
+                data-epayco-country="co"
+                data-epayco-test="true"
+                data-epayco-external="false"
+                data-epayco-response="/"
+                data-epayco-confirmation="/"
+                data-epayco-methodconfirmation="get">
+            </script>
+        </form>
+          <hr>
           <div class="llegada">
-            <p style="background-image: url('../img/iconos-categorias/carritoEntrega.png');"></p>
-            
+            <img src='../img/iconos-categorias/carritoEntrega.png'>
             <p id="p-llegada"></p>
+          </div>
+          <hr>
+          <div class="descripcion">
+            <p>DESCRIPCIÓN</p>
+            <p id="descripcion-producto"></p>
+            <p id="tallas"></p>
           </div>
         </template>
       </div>
@@ -158,6 +179,7 @@
           </section>
         </div>
       </div>
+
 
       
 

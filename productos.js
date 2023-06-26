@@ -150,7 +150,7 @@ document.addEventListener("click", function (e) {
                 json.forEach((el) => {
                     
                     if(el.id == id) {
-                        $template.getElementById("titulo-tarjeta").textContent = el.titulo;
+                        $template.getElementById("titulo-tarjeta").textContent = el.titulo.toUpperCase();
                         $template.querySelector(".categoria-tarjeta").textContent = el.tipo;
                         $template.querySelector(".imagen-tarjeta").setAttribute("src", el.imagen1);
                         $template.querySelector(".imagen-tarjeta").setAttribute("alt", el.titulo);
@@ -160,7 +160,10 @@ document.addEventListener("click", function (e) {
                         $template.getElementById("precio-anterior").textContent = `$ ${el.precio_anterior.toLocaleString("en")}.`;
                         $template.getElementById("price-now").textContent = `$ ${el.precio.toLocaleString("en")}.`;
                         $template.getElementById("p-llegada").textContent = `Llega el ${!(diaHoy === "Domingo") ? diaHoy : "Lunes"}`;
-
+                        $template.getElementById("descripcion-producto").textContent = el.descripcion;
+                        $template.getElementById("tallas").textContent = `${el.tallas}`;
+                        $template.querySelector(".epayco-button").setAttribute("data-epayco-amount", el.precio)
+                        $template.querySelector(".epayco-button").setAttribute("data-epayco-description", el.titulo)
 
 
                         console.log(el.titulo)

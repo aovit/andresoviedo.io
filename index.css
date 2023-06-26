@@ -855,6 +855,7 @@ html {
   transform: translate(-50%, -50%);
   background: white;
   overflow: auto;
+  margin: auto;
 }
 
 .info-tarjeta img {
@@ -939,4 +940,18 @@ html {
 }
 .price-product p {
   padding: -2px;
+}
+
+.llegada {
+  display: flex;
+}
+
+.llegada img {
+  width: 10%;
+  margin: auto;
+}
+
+.llegada p {
+  width: 70%;
+  margin: auto;
 }
